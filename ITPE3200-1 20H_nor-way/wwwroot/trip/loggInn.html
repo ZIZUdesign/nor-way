@@ -4,29 +4,13 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/loggInn.js"></script>
     <script src="../js/validation.js"></script>
-
-    <script>
-        function validerBrukernavn(brukernavn) {
-            const regexp = /^[a-zA-ZæøåÆØÅ\.\ \-]{2,20}$/;
-            const ok = regexp.test(brukernavn);
-            if (!ok) {
-                $("#feilBrukernavn").html("Brukernavnet må bestå av 2 til 20 bokstaver");
-                return false;
-            }
-            else {
-                $("#feilBrukernavn").html("");
-                return true;
-            }
-        }
-    </script>
 </head>
 <body>
 
     <div class="container">
-        <h1>Logg inn</h1>   
+        <h1>Logg inn</h1>
         <form class="form">
             <div class="form-group">
                 <label>Brukernavn</label>

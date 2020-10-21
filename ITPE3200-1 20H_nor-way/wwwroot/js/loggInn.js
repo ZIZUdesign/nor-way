@@ -8,9 +8,10 @@
             brukernavn: $("#brukernavn").val(),
             passord: $("#passord").val()
         }
+        
         $.post("Trip/LoggInn", bruker, function (OK) {
             if (OK) {
-                window.location.href = 'tripIndex.html';
+                window.location.href = '../trip/tripIndex.html';
             }
             else {
                 $("#feil").html("Feil brukernavn eller passord");

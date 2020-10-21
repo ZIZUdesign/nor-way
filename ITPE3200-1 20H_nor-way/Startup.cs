@@ -27,6 +27,15 @@ namespace ITPE3200_1_20H_nor_way
             services.AddScoped<IStationRepository, StationRepository>();
             services.AddScoped<ITripRepository, TripRepository>();
             services.AddScoped<IOrderTicketRepository, OrderTicketRepository>();
+
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".AdventureWorks.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(1800); // 30 minutter
+                options.Cookie.IsEssential = true;
+            });
+            // Denne må også være med:
+            services.AddDistributedMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +49,7 @@ namespace ITPE3200_1_20H_nor_way
             }
 
             app.UseRouting();
+            app.UseSession();
 
             //app.UseDefaultFiles();
 

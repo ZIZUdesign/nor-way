@@ -3,8 +3,11 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="../js/loggInn.js"></script>
     <script src="../js/validation.js"></script>
 
@@ -22,11 +25,38 @@
             }
         }
     </script>
+    <style>
+
+        body {
+            background-color: azure;
+        }
+
+        .container {
+            border-radius: 25px;
+            border: 2px solid black;
+            padding: 20px;
+            width: 700px;
+            height: 280px;
+            margin-top: 50px;
+            background-color: papayawhip;
+        }
+
+       
+    </style>
 </head>
 <body>
 
+
+    <nav class="navbar navbar-inverse">
+        <ul class="nav navbar-nav navbar-right">
+           
+            <li><a href="/orderTicket/index.html"><span class="glyphicon glyphicon-log-in"></span> Home</a></li>
+        </ul>
+    </nav>
+
+
     <div class="container">
-        <h1>Logg inn</h1>   
+        <h1>Logg inn</h1>
         <form class="form">
             <div class="form-group">
                 <label>Brukernavn</label>
@@ -45,9 +75,8 @@
         </form>
     </div>
 
-    <footer>
-        <p>Linda Kadriji s333751 | Jon Magnar Lunde s333775 | Zeray Tewelde Kahsay s327667</p>
-    </footer>
-   
+
+
+
 </body>
 </html>
